@@ -1,0 +1,13 @@
+{
+  "name": "abc-bank-fund-transfer-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Simple ABC Bank fund transfer demonstration",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
