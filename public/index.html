@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ABC Bank</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="brand-bar">
+    <a class="brand" href="/" aria-label="ABC Bank home">
+      <span class="brand-mark">A</span>
+      <span>ABC Bank</span>
+    </a>
+    <span class="secure-label">Secure Banking</span>
+  </header>
+
+  <main>
+    <section id="loginView" class="login-layout">
+      <div class="welcome-panel">
+        <p class="eyebrow">Welcome to ABC Bank</p>
+        <h1>Banking made simple.</h1>
+        <p>Access your accounts and make secure transfers from one clear dashboard.</p>
+      </div>
+      <form id="loginForm" class="card login-card">
+        <h2>Log in</h2>
+        <p class="muted">Enter your details to continue.</p>
+        <label for="customerId">Customer ID</label>
+        <input id="customerId" value="demo-user" autocomplete="username" required>
+        <label for="password">Password</label>
+        <input id="password" type="password" value="password" autocomplete="current-password" required>
+        <button type="submit">Log in securely</button>
+        <p class="demo-note">Demo access: use the pre-filled details.</p>
+      </form>
+    </section>
+
+    <section id="dashboardView" class="dashboard hidden">
+      <div class="dashboard-heading">
+        <div>
+          <p class="eyebrow">ABC Bank dashboard</p>
+          <h1>Good day, Demo Customer</h1>
+          <p class="muted">Here is a summary of your accounts.</p>
+        </div>
+        <button id="logoutButton" class="secondary" type="button">Log out</button>
+      </div>
+
+      <div class="account-grid">
+        <article class="account-card primary-account">
+          <p>Everyday Account</p>
+          <h2 id="acc001Balance">$1,000.00</h2>
+          <span>ACC001</span>
+        </article>
+        <article class="account-card">
+          <p>Beneficiary Account</p>
+          <h2 id="pay001Balance">$500.00</h2>
+          <span>PAY001</span>
+        </article>
+      </div>
+
+      <div class="content-grid">
+        <form id="transferForm" class="card transfer-card">
+          <div>
+            <p class="eyebrow">Fund Transfer</p>
+            <h2>Transfer money</h2>
+          </div>
+          <label for="fromAccount">From account</label>
+          <select id="fromAccount">
+            <option value="ACC001">Everyday Account — ACC001</option>
+          </select>
+          <label for="toAccount">To account</label>
+          <select id="toAccount">
+            <option value="PAY001">Beneficiary Account — PAY001</option>
+          </select>
+          <label for="amount">Amount</label>
+          <div class="money-input">
+            <span>$</span>
+            <input id="amount" type="number" step="0.01" placeholder="0.00" required>
+          </div>
+          <p id="transferMessage" class="message" role="status" aria-live="polite"></p>
+          <button type="submit">Transfer funds</button>
+        </form>
+        <aside class="card help-card">
+          <div class="help-icon">✓</div>
+          <h2>Simple and secure</h2>
+          <p>Review the account details and amount before completing your transfer.</p>
+          <ul>
+            <li>Transfers update immediately</li>
+            <li>Amounts must be greater than zero</li>
+            <li>Accounts must be different</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 ABC Bank. Demonstration application.</footer>
+  <script src="/transfer.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
