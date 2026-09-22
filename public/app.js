@@ -13,7 +13,6 @@ const currency = new Intl.NumberFormat('en-AU', {
 
 function renderBalances() {
   document.querySelector('#acc001Balance').textContent = currency.format(accounts.ACC001.balance);
-  document.querySelector('#pay001Balance').textContent = currency.format(accounts.PAY001.balance);
 }
 
 loginForm.addEventListener('submit', (event) => {
